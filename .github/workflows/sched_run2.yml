@@ -19,8 +19,7 @@ jobs:
 
       - name: Install dependencies (if any)
         run: |
-          pip install -r requirements.txt # If you have a requirements.txt file
-          # Add other installation commands if needed
-
+          pip install -r requirements.txt
+          
       - name: Run Python script
-        run: main.py 
+        run: main.py
