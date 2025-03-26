@@ -2,7 +2,7 @@ name: Scheduled Python Run
 
 on:
   schedule:
-    - cron: '0 5 * * *'
+    - cron: '25 5 * * *'
 
 jobs:
   run-python:
@@ -22,4 +22,4 @@ jobs:
           pip install -r requirements.txt 
         
       - name: Run Python script
-        run: main.py 
+        run: main.py
