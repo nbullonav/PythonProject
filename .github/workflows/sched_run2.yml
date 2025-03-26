@@ -28,4 +28,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: output-data
-          path: ${{ github.workspace }}/stations_data.csv
+          path: stations_data.csv
+          overwrite: true
