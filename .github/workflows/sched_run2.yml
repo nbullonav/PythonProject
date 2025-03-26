@@ -1,0 +1,26 @@
+name: Scheduled Python Run
+
+on:
+  schedule:
+    - cron: '0 5 * * *'
+
+jobs:
+  run_python_script:
+    runs-on: ubuntu-latest 
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x' 
+
+      - name: Install dependencies (if any)
+        run: |
+          pip install -r requirements.txt # If you have a requirements.txt file
+          # Add other installation commands if needed
+
+      - name: Run Python script
+        run: main.py 
