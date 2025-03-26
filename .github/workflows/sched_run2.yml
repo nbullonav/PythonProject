@@ -23,3 +23,9 @@ jobs:
         
       - name: Run Python script
         run: python3 main.py
+
+      - name: Upload output csv as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: output-data
+          path: ${{ github.workspace }}/stations_data.csv
