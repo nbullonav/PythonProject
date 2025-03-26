@@ -24,9 +24,9 @@ jobs:
       - name: Run Python script
         run: python3 main.py > stations_data.csv
 
-      - name: Upload output csv as artifact
+      - name: Upload csv as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: output_files/output-data.zip
-          path: output-data.zip
+          name: script-output
+          path: stations_output.csv
           overwrite: true
