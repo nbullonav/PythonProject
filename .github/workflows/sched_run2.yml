@@ -2,7 +2,7 @@ name: Scheduled Python Run
 
 on:
   schedule:
-    - cron: '24 17 * * *'
+    - cron: '30 17 * * *'
 
 jobs:
   run-python:
@@ -21,14 +21,12 @@ jobs:
         run: |
           pip install -r requirements.txt 
         
-      - name: Run Python script and create output file
+      - name: Run Python script
         run: python3 main.py > stations_data.csv
 
-      - name: Upload csv as artifact
+      - name: Upload output csv as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: script-output
-          path: 
-            outputs/
-            stations_output.csv
+          name: output-data
+          path: stations_data.csv
           overwrite: true
