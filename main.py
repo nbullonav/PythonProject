@@ -35,4 +35,3 @@ whichfields = ['tavg','prcp','wspd','pres','tsun','name','latitude','longitude']
 csvfile = 'stations data.csv'
 #output_path = os.path.join(os.environ['GITHUB_WORKSPACE'], csvfile)
 finaldata.to_csv(csvfile, columns=whichfields)
-#print(f"CSV file written to: {output_path}")
