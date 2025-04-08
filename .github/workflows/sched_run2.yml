@@ -18,8 +18,7 @@ jobs:
           python-version: '3.11' 
 
       - name: Install dependencies (if any)
-        run: |
-          pip install -r requirements.txt 
+        run: pip install -r requirements.txt 
         
       - name: Run Python script
         run: python3 main.py > stations_data.csv
