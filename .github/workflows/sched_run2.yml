@@ -2,7 +2,7 @@ name: Scheduled Python Run
 
 on:
   schedule:
-    - cron: "45 6 * * *"
+    - cron: "45 7 * * *"
 
 jobs:
   run-python:
@@ -29,5 +29,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: output-data
-          path: /output_files/stationsdata.csv
+          path: output_files/stationsdata.csv
           overwrite: true
