@@ -19,8 +19,8 @@ jobs:
       - name: Install dependencies (if any)
         run: pip install -r requirements.txt 
 
-      - name: List files
-        run: ls -R
+      - name: Create folder
+        run: mkdir -p output_files
         
       - name: Run Python script
         id: stations_script
