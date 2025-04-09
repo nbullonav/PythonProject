@@ -23,7 +23,7 @@ jobs:
         
       - name: Run Python script
         id: stations_script
-        run: python main.py
+        run: python main.py > stationsdata.csv
 
       - name: Upload output as artifact
         uses: actions/upload-artifact@v4
