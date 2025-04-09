@@ -32,6 +32,6 @@ finaldata = dfdata.join(filteredpd, on ='station',how='left')
 # Define needed fields
 whichfields = ['tavg','prcp','wspd','pres','tsun','name','latitude','longitude']
 # Define .csv filename
-csvfile = 'stations data.csv'
+csvfile = 'output_files/stationsdata.csv'
 #output_path = os.path.join(os.environ['GITHUB_WORKSPACE'], csvfile)
 finaldata.to_csv(csvfile, columns=whichfields)
