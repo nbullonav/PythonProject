@@ -2,7 +2,7 @@ name: Scheduled Python Run
 
 on:
   schedule:
-    - cron: '30 */8 * * *'
+    - cron: '20 4 * * *'
 
 jobs:
   run-python:
