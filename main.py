@@ -4,10 +4,10 @@ from datetime import datetime
 from meteostat import Stations, Daily, Monthly
 import matplotlib.pyplot as plt
 
-fechainic = input("Ingrese la fecha de inicio: ")
-fechafin = input("Ingrese la fecha de fin: ")
+#fechainic = input("Ingrese la fecha de inicio: ")
+#fechafin = input("Ingrese la fecha de fin: ")
 
-def getWeatherData(fechainic, fechafin):
+def getWeatherData():
   stations = Stations()
   stations = stations.region('PE').fetch()
   pd = stations
@@ -15,8 +15,8 @@ def getWeatherData(fechainic, fechafin):
   conds = ~ (pd.monthly_start.isna() & pd.monthly_end.isna())
   filteredpd = pd[conds]
   stationlist = filteredpd['ident'].to_list()
-  #start = datetime(1950,1,1)
-  #end =   datetime(2025,2,28)
+  start = datetime(1950,1,1)
+  end =   datetime(2025,2,28)
   data = Monthly(stationlist ,start, end )
   data = data.fetch()
   dfdata = data 
