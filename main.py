@@ -22,7 +22,7 @@ def getWeatherData():
   dfdata = data 
   finaldata = dfdata.join(filteredpd, on ='station',how='left')
   whichfields = ['tavg','prcp','wspd','pres','tsun','name','latitude','longitude']
-  csvfile = 'stationsdata.csv'
+  csvfile = 'output_data/stationsdata.csv'
   finaldata.to_csv(csvfile, columns=whichfields)
 
 if __name__ == '__getWeatherData__':
